@@ -103,7 +103,7 @@ intereses:
 
 ### 📨 RabbitMQ SMS System
 
-> Sistema de control de envío de SMS con RabbitMQ, delayed exchange y MySQL en Python 3.12. Gestiona colas diferenciadas por tipo de usuario con ventanas de tiempo configurables.
+> Sistema de control de simulación de envío de SMS con RabbitMQ, delayed exchange y MySQL en Python 3.12. Gestiona colas diferenciadas por tipo de usuario con ventanas de tiempo configurables.
 
 ![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white)
 ![RabbitMQ](https://img.shields.io/badge/RabbitMQ-FF6600?style=flat&logo=rabbitmq&logoColor=white)
