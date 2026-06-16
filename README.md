@@ -141,8 +141,7 @@ intereses:
 
 <div align="center">
 
-<!-- Trofeos: no-frame y no-bg mejoran la compatibilidad visual -->
-[![trophy](https://github-profile-trophy.vercel.app/?username=JaviBot00&theme=tokyonight&no-frame=true&no-bg=true&row=1&column=6&margin-w=10)](https://github.com/ryo-ma/github-profile-trophy)
+[![trophy](https://github-trophies.vercel.app/?username=JaviBot00&theme=tokyonight&no-frame=true&no-bg=true&row=1&column=6&margin-w=10)](https://github.com/lucthienphong1120/github-trophies)
 
 </div>
 
