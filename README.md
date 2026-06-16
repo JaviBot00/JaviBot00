@@ -139,12 +139,17 @@ intereses:
 
 </div>
 
-<div align="center">
+<!-- <div align="center">
 
 [![Javier's Activity Graph](https://github-readme-activity-graph.vercel.app/graph?username=JaviBot00&theme=tokyo-night&hide_border=true)](https://github.com/ashutosh00710/github-readme-activity-graph)
 
-</div>
+</div> -->
 
+<div align="center">
+
+![snake](https://raw.githubusercontent.com/JaviBot00/JaviBot00/output/snake.svg)
+
+</div>
 ---
 
 ## 🌐 Idiomas
