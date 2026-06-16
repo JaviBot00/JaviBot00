@@ -141,7 +141,7 @@ intereses:
 
 <div align="center">
 
-[![trophy](https://github-trophies.vercel.app/?username=JaviBot00&theme=tokyonight&no-frame=true&no-bg=true&row=1&column=6&margin-w=10)](https://github.com/lucthienphong1120/github-trophies)
+[![Javier's Activity Graph](https://github-readme-activity-graph.vercel.app/graph?username=JaviBot00&theme=tokyo-night&hide_border=true)](https://github.com/ashutosh00710/github-readme-activity-graph)
 
 </div>
 
