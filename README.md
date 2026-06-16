@@ -150,6 +150,7 @@ intereses:
 ![snake](https://raw.githubusercontent.com/JaviBot00/JaviBot00/output/snake.svg)
 
 </div>
+
 ---
 
 ## 🌐 Idiomas
