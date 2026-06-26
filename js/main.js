@@ -223,6 +223,36 @@ function renderProjects() {
 
 
 /* ----------------------------------------------------------
+   RENDER: EDUCATION
+   Genera las tarjetas de formación desde el JSON.
+   La primera entrada (en curso) ocupa el ancho completo.
+---------------------------------------------------------- */
+function renderEducation() {
+  const container = document.getElementById('education-grid');
+  if (!container) return;
+
+  const items       = I18n.get('education.items') || [];
+  const presentLabel = I18n.get('education.present') || 'En curso';
+
+  container.innerHTML = items.map((item) => `
+    <div class="education-card ${item.current ? 'current' : ''} reveal">
+      <div class="education-card-left">
+        <div class="education-degree">${item.degree}</div>
+        <div class="education-center">${item.center}</div>
+        <div class="education-meta">
+          <span class="education-period">${item.period}</span>
+          ${item.current ? `<span class="education-badge">${presentLabel}</span>` : ''}
+        </div>
+        <div class="education-tags">
+          ${item.tags.map(t => `<span class="education-tag">${t}</span>`).join('')}
+        </div>
+      </div>
+    </div>
+  `).join('');
+}
+
+
+/* ----------------------------------------------------------
    RENDER: CONTACT LINKS
    Genera los links de contacto desde el JSON.
 ---------------------------------------------------------- */
@@ -319,6 +349,7 @@ function renderAll() {
   renderAboutStats();
   renderStack();
   renderExperience();
+  renderEducation();
   renderProjects();
   renderContactLinks();
   // Re-registra los observers de reveal para los nuevos elementos

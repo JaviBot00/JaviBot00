@@ -29,6 +29,15 @@
     grid-template-columns: 1fr;
   }
 
+  /* Education: una columna */
+  .education-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .education-card:first-child {
+    grid-template-columns: 1fr;
+  }
+
   /* Contact: apilado */
   .contact-grid {
     grid-template-columns: 1fr;

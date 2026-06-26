@@ -21,6 +21,7 @@ Portfolio personal desplegado en GitHub Pages dentro del mismo repo de perfil (`
 │   ├── about.css           # Sección "Sobre mí", avatar, stats
 │   ├── stack.css           # Tags de tecnologías
 │   ├── experience.css      # Timeline colapsable de experiencia
+│   ├── education.css       # Grid de tarjetas de formación
 │   ├── projects.css        # Grid de proyectos y tarjetas
 │   ├── contact.css         # Formulario y links de contacto
 │   └── responsive.css      # Media queries (≤900px y ≤600px)

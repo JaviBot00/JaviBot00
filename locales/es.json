@@ -4,6 +4,7 @@
     "stack": "Stack",
     "experience": "Experiencia",
     "projects": "Proyectos",
+    "education": "Formación",
     "contact": "Contacto"
   },
   "hero": {
@@ -130,6 +131,47 @@
         "links": [
           { "label": "GitHub", "url": "https://github.com/JaviBot00/Docker-ELK-Secure" }
         ]
+      }
+    ]
+  },
+  "education": {
+    "title": "Formación",
+    "present": "En curso",
+    "items": [
+      {
+        "degree": "CFGS Desarrollo de Aplicaciones Web",
+        "center": "IES Politécnico Jesús Marín",
+        "period": "2025 – 2027",
+        "current": true,
+        "tags": ["Java", "Spring Boot", "Laravel", "JavaScript"]
+      },
+      {
+        "degree": "CE Ciberseguridad en Entornos TIC",
+        "center": "C.P.I.F.P. Alan Turing",
+        "period": "2023 – 2024",
+        "current": false,
+        "tags": ["ENS 2022", "ISO 27001", "Wazuh", "Hacking Ético"]
+      },
+      {
+        "degree": "CFGS Desarrollo de Aplicaciones Multiplataforma",
+        "center": "IES Politécnico Jesús Marín",
+        "period": "2021 – 2023",
+        "current": false,
+        "tags": ["Java", "Kotlin", "Android", "SQL"]
+      },
+      {
+        "degree": "CFGS Administración de Sistemas Informáticos en Red",
+        "center": "IES Politécnico Jesús Marín",
+        "period": "2019 – 2022",
+        "current": false,
+        "tags": ["Linux", "Redes", "Bash", "Virtualización"]
+      },
+      {
+        "degree": "Cursos: Spring Boot · Python",
+        "center": "Udemy",
+        "period": "Nov 2024 – May 2025",
+        "current": false,
+        "tags": ["Spring Boot", "Python"]
       }
     ]
   },
