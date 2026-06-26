@@ -1,0 +1,111 @@
+/* ============================================================
+   RESPONSIVE.CSS — Media queries
+   Centralizados aquí para fácil mantenimiento.
+   ============================================================ */
+
+/* --- Tablet / pantallas medianas (≤ 900px) --- */
+@media (max-width: 900px) {
+
+  /* Hero: una sola columna, ocultar terminal */
+  .hero-inner {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-terminal {
+    display: none;
+  }
+
+  /* About: apilado */
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-photo-wrapper {
+    width: 200px;
+  }
+
+  /* Projects: una columna */
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Contact: apilado */
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  /* Nav: ocultar links, mostrar hamburguesa */
+  .nav-links {
+    display: none;
+  }
+
+  .nav-links.open {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 64px;
+    left: 0;
+    right: 0;
+    background: var(--bg-nav);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    padding: 1rem 2rem;
+    border-bottom: 1px solid var(--border-subtle);
+    gap: 0.25rem;
+  }
+
+  .nav-menu-btn {
+    display: flex;
+  }
+}
+
+/* --- Móvil (≤ 600px) --- */
+@media (max-width: 600px) {
+  .container {
+    padding: 0 1.25rem;
+  }
+
+  section {
+    padding: 4rem 0;
+  }
+
+  .about-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-ctas {
+    flex-direction: column;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    justify-content: center;
+    width: 100%;
+  }
+
+  .hero-name {
+    font-size: 2.2rem;
+  }
+
+  .section-title {
+    margin-bottom: 2rem;
+  }
+
+  .timeline {
+    padding-left: 1.5rem;
+  }
+
+  .timeline-header {
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+
+  .timeline-toggle {
+    display: none; /* en móvil siempre abierto */
+  }
+
+  .timeline-items {
+    max-height: none !important; /* siempre visible en móvil */
+  }
+}

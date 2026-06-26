@@ -1,0 +1,115 @@
+/* ============================================================
+   ABOUT.CSS — Sección "Sobre mí"
+   ============================================================ */
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+/* --- Texto --- */
+.about-text p {
+  color: var(--text-secondary);
+  font-size: 1.02rem;
+  line-height: 1.8;
+  margin-bottom: 1.25rem;
+}
+
+/* --- Stats bajo el texto --- */
+.about-stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+  margin-top: 2rem;
+}
+
+.about-stat {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius);
+  padding: 0.9rem 1rem;
+  transition: border-color var(--transition), background var(--transition);
+}
+
+.about-stat:hover {
+  border-color: var(--accent);
+  background: var(--bg-card-hover);
+}
+
+.about-stat-label {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  color: var(--text-muted);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 0.2rem;
+}
+
+.about-stat-value {
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+/* --- Foto / Avatar (columna derecha) --- */
+.about-photo-wrapper {
+  position: relative;
+  width: 260px;
+  margin: 0 auto;
+}
+
+/* Si hay foto real */
+.about-photo {
+  width: 100%;
+  aspect-ratio: 1;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border);
+  object-fit: cover;
+}
+
+/* Placeholder con iniciales (por defecto hasta que pongas foto) */
+.about-avatar-placeholder {
+  width: 100%;
+  aspect-ratio: 1;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border);
+  background: var(--bg-card);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  font-family: var(--font-mono);
+}
+
+.about-initials {
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: var(--accent);
+  letter-spacing: -0.03em;
+}
+
+.about-avatar-label {
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+/* Badge flotante sobre la foto */
+.about-photo-badge {
+  position: absolute;
+  bottom: -12px;
+  right: -12px;
+  background: var(--accent);
+  color: #fff;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 600;
+  padding: 0.4rem 0.75rem;
+  border-radius: 100px;
+  letter-spacing: 0.06em;
+  white-space: nowrap;
+}

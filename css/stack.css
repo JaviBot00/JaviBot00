@@ -1,0 +1,61 @@
+/* ============================================================
+   STACK.CSS — Sección de tecnologías
+   ============================================================ */
+
+.stack-categories {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.stack-category-title {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 0.85rem;
+  padding-left: 0.25rem;
+}
+
+.stack-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.stack-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  padding: 0.4rem 0.85rem;
+  border-radius: 100px;
+  transition: all var(--transition);
+  cursor: default;
+  white-space: nowrap;
+}
+
+.stack-tag:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+  background: var(--accent-subtle);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px var(--accent-glow);
+}
+
+/* Punto que aparece en hover */
+.stack-tag .tag-dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--accent);
+  opacity: 0;
+  transition: opacity var(--transition);
+}
+
+.stack-tag:hover .tag-dot { opacity: 1; }

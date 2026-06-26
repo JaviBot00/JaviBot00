@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- SEO básico -->
+  <title>Javier Botella — Backend & Android Developer</title>
+  <meta name="description" content="Portfolio de Javier Botella Muñoz, desarrollador Backend y Android con experiencia en Java, Spring Boot, Kotlin y DevOps." />
+  <meta name="author" content="Javier Botella Muñoz" />
+
+  <!-- Open Graph (previsualización en LinkedIn, WhatsApp, etc.) -->
+  <meta property="og:title" content="Javier Botella — Backend & Android Developer" />
+  <meta property="og:description" content="APIs REST, apps Android nativas e infraestructura. Del código al despliegue." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://javibot00.github.io/JaviBot00/" />
+
+  <!-- Fuentes: Inter (cuerpo) + Fira Code (monospace) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- CSS — orden importante: tokens primero -->
+  <link rel="stylesheet" href="css/tokens.css" />
+  <link rel="stylesheet" href="css/reset.css" />
+  <link rel="stylesheet" href="css/layout.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+  <link rel="stylesheet" href="css/hero.css" />
+  <link rel="stylesheet" href="css/about.css" />
+  <link rel="stylesheet" href="css/stack.css" />
+  <link rel="stylesheet" href="css/experience.css" />
+  <link rel="stylesheet" href="css/projects.css" />
+  <link rel="stylesheet" href="css/contact.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+</head>
+
+<body>
+
+  <!-- ======================================================
+       NAV
+  ====================================================== -->
+  <nav id="nav" role="navigation" aria-label="Navegación principal">
+    <div class="nav-inner">
+
+      <!-- Logo / nombre abreviado -->
+      <a href="#hero" class="nav-logo">javier<span>.</span>botella</a>
+
+      <!-- Links de sección -->
+      <ul class="nav-links" id="nav-links" role="list">
+        <li><a href="#about"      data-i18n="nav.about">Sobre mí</a></li>
+        <li><a href="#stack"      data-i18n="nav.stack">Stack</a></li>
+        <li><a href="#experience" data-i18n="nav.experience">Experiencia</a></li>
+        <li><a href="#projects"   data-i18n="nav.projects">Proyectos</a></li>
+        <li><a href="#contact"    data-i18n="nav.contact">Contacto</a></li>
+      </ul>
+
+      <!-- Controles de tema e idioma -->
+      <div class="nav-controls">
+        <button id="lang-toggle"  class="nav-btn" aria-label="Cambiar idioma">EN</button>
+        <button id="theme-toggle" class="nav-btn" aria-label="Cambiar tema">☀️</button>
+
+        <!-- Hamburguesa (visible en móvil) -->
+        <button id="nav-menu-btn" class="nav-menu-btn" aria-label="Abrir menú" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+
+    </div>
+  </nav>
+
+
+  <!-- ======================================================
+       HERO
+  ====================================================== -->
+  <section id="hero">
+    <div class="container">
+      <div class="hero-inner">
+
+        <!-- Columna izquierda: presentación -->
+        <div class="hero-left">
+
+          <!-- Píldora de disponibilidad -->
+          <div class="hero-tag" data-i18n="hero.available">
+            Disponible para incorporación inmediata
+          </div>
+
+          <p class="hero-greeting" data-i18n="hero.greeting">Hola, soy</p>
+          <h1 class="hero-name" data-i18n="hero.name">Javier Botella</h1>
+
+          <!-- Typing animation -->
+          <div class="hero-role">
+            <span id="hero-role-text"></span><span class="cursor">|</span>
+          </div>
+
+          <p class="hero-desc" data-i18n="hero.description">
+            Backend y Android con experiencia real en producción. Construyo APIs REST, aplicaciones móviles nativas y la infraestructura que las sostiene.
+          </p>
+
+          <div class="hero-ctas">
+            <a href="docs/CV_Javier_Botella.pdf" download class="btn-primary">
+              ↓ <span data-i18n="hero.cta_cv">Descargar CV</span>
+            </a>
+            <a href="#contact" class="btn-secondary">
+              <span data-i18n="hero.cta_contact">Contacto</span>
+            </a>
+            <a href="https://github.com/JaviBot00" target="_blank" rel="noopener noreferrer" class="btn-secondary">
+              ↗ <span data-i18n="hero.cta_github">GitHub</span>
+            </a>
+          </div>
+
+          <div class="hero-meta">
+            <span>📍 Málaga, España</span>
+            <span>·</span>
+            <span>Backend · Android · DevOps</span>
+          </div>
+
+        </div>
+
+        <!-- Columna derecha: terminal decorativa -->
+        <div class="hero-terminal" aria-hidden="true">
+          <div class="terminal-bar">
+            <div class="terminal-dots">
+              <span class="terminal-dot dot-red"></span>
+              <span class="terminal-dot dot-yellow"></span>
+              <span class="terminal-dot dot-green"></span>
+            </div>
+            <span class="terminal-title">javier_botella.yaml</span>
+          </div>
+          <div class="terminal-body" id="terminal-body">
+            <!-- Renderizado por JS (renderTerminal()) -->
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ======================================================
+       ABOUT
+  ====================================================== -->
+  <section id="about">
+    <div class="container">
+
+      <p class="section-label reveal">About</p>
+      <h2 class="section-title reveal" data-i18n="about.title">Sobre mí</h2>
+
+      <div class="about-grid">
+
+        <!-- Texto -->
+        <div class="about-text reveal">
+          <p data-i18n="about.p1">
+            Llevo tiempo trabajando en entornos reales: sistemas en producción, migraciones críticas, integración de servicios gubernamentales y apps que usan personas de verdad.
+          </p>
+          <p data-i18n="about.p2">
+            Mi punto diferencial es el ciclo completo: puedo escribir la API, contenerizar la aplicación, configurar la observabilidad y desplegar con CI/CD.
+          </p>
+
+          <!-- Stats dinámicas -->
+          <div class="about-stats" id="about-stats">
+            <!-- Renderizado por JS (renderAboutStats()) -->
+          </div>
+        </div>
+
+        <!-- Foto / Avatar -->
+        <div class="about-photo-wrapper reveal reveal-delay-2">
+          <!--
+            OPCIÓN A: foto real
+            Descomenta y cambia la ruta cuando tengas la foto.
+            <img src="assets/foto.jpg" alt="Javier Botella" class="about-photo" />
+          -->
+
+          <!-- OPCIÓN B: placeholder con iniciales (por defecto) -->
+          <div class="about-avatar-placeholder">
+            <span class="about-initials">JB</span>
+            <span class="about-avatar-label">Javier Botella</span>
+          </div>
+
+          <div class="about-photo-badge">Backend & Android</div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ======================================================
+       STACK
+  ====================================================== -->
+  <section id="stack">
+    <div class="container">
+      <p class="section-label reveal">Tech</p>
+      <h2 class="section-title reveal" data-i18n="stack.title">Stack</h2>
+
+      <div class="stack-categories" id="stack-content">
+        <!-- Renderizado por JS (renderStack()) -->
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ======================================================
+       EXPERIENCE
+  ====================================================== -->
+  <section id="experience">
+    <div class="container">
+      <p class="section-label reveal">Work</p>
+      <h2 class="section-title reveal" data-i18n="experience.title">Experiencia</h2>
+
+      <div class="timeline" id="timeline">
+        <!-- Renderizado por JS (renderExperience()) -->
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ======================================================
+       PROJECTS
+  ====================================================== -->
+  <section id="projects">
+    <div class="container">
+      <p class="section-label reveal">Build</p>
+      <h2 class="section-title reveal" data-i18n="projects.title">Proyectos</h2>
+
+      <div class="projects-grid" id="projects-grid">
+        <!-- Renderizado por JS (renderProjects()) -->
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ======================================================
+       CONTACT
+  ====================================================== -->
+  <section id="contact">
+    <div class="container">
+      <p class="section-label reveal">Contact</p>
+      <h2 class="section-title reveal" data-i18n="contact.title">Contacto</h2>
+
+      <div class="contact-grid">
+
+        <!-- Info y links directos -->
+        <div class="contact-info reveal">
+          <p class="contact-subtitle" data-i18n="contact.subtitle">¿Hablamos?</p>
+          <p class="contact-desc" data-i18n="contact.description">
+            Abierto a oportunidades, colaboraciones o simplemente hablar de tech.
+          </p>
+          <div class="contact-links" id="contact-links">
+            <!-- Renderizado por JS (renderContactLinks()) -->
+          </div>
+        </div>
+
+        <!-- Formulario -->
+        <form class="contact-form reveal reveal-delay-2" id="contact-form" novalidate>
+          <div class="form-group">
+            <label class="form-label" for="form-name" data-i18n="contact.form_name">Nombre</label>
+            <input
+              class="form-input"
+              type="text"
+              id="form-name"
+              name="name"
+              data-i18n-placeholder="contact.form_name"
+              placeholder="Nombre"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="form-email" data-i18n="contact.form_email">Email</label>
+            <input
+              class="form-input"
+              type="email"
+              id="form-email"
+              name="email"
+              data-i18n-placeholder="contact.form_email"
+              placeholder="Email"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="form-message" data-i18n="contact.form_message">Mensaje</label>
+            <textarea
+              class="form-textarea"
+              id="form-message"
+              name="message"
+              data-i18n-placeholder="contact.form_message"
+              placeholder="Mensaje"
+              required
+            ></textarea>
+          </div>
+
+          <div id="form-status" class="form-status" aria-live="polite"></div>
+
+          <button type="submit" class="btn-primary" data-i18n="contact.form_send">
+            Enviar
+          </button>
+        </form>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ======================================================
+       FOOTER
+  ====================================================== -->
+  <footer>
+    <div class="container">
+      <div class="footer-inner">
+        <p class="footer-brand">javier<span>.</span>botella</p>
+        <p class="footer-meta" data-i18n="footer.built">
+          Construido con HTML, CSS y JS · Sin frameworks
+        </p>
+        <p class="footer-meta">
+          &copy; <span id="footer-year"></span>
+          <span data-i18n="footer.rights">Javier Botella Muñoz</span>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- Botón de scroll to top -->
+  <button id="scroll-top" aria-label="Volver arriba">↑</button>
+
+
+  <!-- ======================================================
+       SCRIPTS — orden: i18n → animations → main
+  ====================================================== -->
+  <script src="js/i18n.js"></script>
+  <script src="js/animations.js"></script>
+  <script src="js/main.js"></script>
+
+  <!-- Año dinámico en el footer -->
+  <script>
+    document.getElementById('footer-year').textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>

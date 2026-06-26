@@ -1,0 +1,166 @@
+/* ============================================================
+   HERO.CSS — Sección principal y terminal decorativa
+   ============================================================ */
+
+#hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding-top: 64px; /* compensa el nav fijo */
+  position: relative;
+  overflow: hidden;
+}
+
+/* Orbe de fondo: ambiente sin peso visual */
+#hero::before {
+  content: '';
+  position: absolute;
+  top: 20%;
+  right: -10%;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(108,99,255,0.12) 0%, transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.hero-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+  width: 100%;
+}
+
+/* Píldora de disponibilidad */
+.hero-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--accent);
+  background: var(--accent-subtle);
+  border: 1px solid var(--accent-glow);
+  padding: 0.3rem 0.75rem;
+  border-radius: 100px;
+  margin-bottom: 1.5rem;
+  letter-spacing: 0.04em;
+}
+
+/* Punto pulsante de "disponible" */
+.hero-tag::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  background: var(--accent);
+  border-radius: 50%;
+  animation: pulse 2s infinite;
+}
+
+.hero-greeting {
+  font-family: var(--font-mono);
+  font-size: 1rem;
+  color: var(--text-muted);
+  margin-bottom: 0.25rem;
+  letter-spacing: 0.02em;
+}
+
+.hero-name {
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  color: var(--text-primary);
+  line-height: 1.05;
+  margin-bottom: 0.5rem;
+}
+
+/* Texto animado con cursor */
+.hero-role {
+  font-family: var(--font-mono);
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  color: var(--accent);
+  min-height: 2em;
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+}
+
+.hero-role .cursor {
+  animation: blink 1s infinite;
+}
+
+.hero-desc {
+  font-size: 1.05rem;
+  color: var(--text-secondary);
+  line-height: 1.75;
+  margin-bottom: 2rem;
+  max-width: 520px;
+}
+
+.hero-ctas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-bottom: 2.5rem;
+}
+
+.hero-meta {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  letter-spacing: 0.03em;
+}
+
+/* ============================================================
+   TERMINAL (columna derecha del hero)
+   ============================================================ */
+.hero-terminal {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  line-height: 1.9;
+}
+
+.terminal-bar {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid var(--border-subtle);
+  background: rgba(255,255,255,0.02);
+}
+
+.terminal-dots { display: flex; gap: 6px; }
+
+.terminal-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.dot-red    { background: #FF5F57; }
+.dot-yellow { background: #FFBD2E; }
+.dot-green  { background: #27C840; }
+
+.terminal-title {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  margin-left: auto;
+  letter-spacing: 0.04em;
+}
+
+.terminal-body { padding: 1.25rem 1.5rem; }
+
+/* Colores de sintaxis de la terminal */
+.t-comment { color: var(--text-muted); }
+.t-key     { color: #7DD3FC; }  /* azul claro */
+.t-val     { color: #86EFAC; }  /* verde claro */
+.t-str     { color: #FCA5A5; }  /* rosa claro */
+.t-accent  { color: var(--accent); }
+.t-prompt  { color: var(--accent); font-weight: 600; user-select: none; }

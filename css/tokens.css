@@ -1,0 +1,54 @@
+/* ============================================================
+   TOKENS.CSS — Variables globales de diseño
+   Edita aquí para cambiar toda la paleta del portfolio.
+   ============================================================ */
+
+:root {
+  /* --- Acento de marca (viene del README: #6C63FF) --- */
+  --accent:        #6C63FF;
+  --accent-dim:    #4F48CC;
+  --accent-glow:   rgba(108, 99, 255, 0.18);
+  --accent-subtle: rgba(108, 99, 255, 0.08);
+
+  /* --- Superficies: modo oscuro (default) --- */
+  --bg:            #0D0D12;
+  --bg-card:       #13131A;
+  --bg-card-hover: #17171F;
+  --bg-nav:        rgba(13, 13, 18, 0.85);
+
+  /* --- Texto --- */
+  --text-primary:   #F0EEF8;
+  --text-secondary: #9896AA;
+  --text-muted:     #5E5C72;
+
+  /* --- Bordes --- */
+  --border:        rgba(108, 99, 255, 0.15);
+  --border-subtle: rgba(255, 255, 255, 0.06);
+
+  /* --- Tipografía --- */
+  --font-mono: 'Fira Code', 'Cascadia Code', monospace;
+  --font-sans: 'Inter', system-ui, sans-serif;
+
+  /* --- Radios --- */
+  --radius-sm: 6px;
+  --radius:    12px;
+  --radius-lg: 20px;
+
+  /* --- Transición global --- */
+  --transition: 200ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* --- Modo claro --- */
+[data-theme="light"] {
+  --bg:            #F7F6FB;
+  --bg-card:       #FFFFFF;
+  --bg-card-hover: #F3F1FF;
+  --bg-nav:        rgba(247, 246, 251, 0.88);
+
+  --text-primary:   #0D0D12;
+  --text-secondary: #4A4861;
+  --text-muted:     #9896AA;
+
+  --border:        rgba(108, 99, 255, 0.2);
+  --border-subtle: rgba(0, 0, 0, 0.07);
+}

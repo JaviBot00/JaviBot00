@@ -1,0 +1,113 @@
+/* ============================================================
+   EXPERIENCE.CSS — Timeline de experiencia laboral
+   ============================================================ */
+
+.timeline {
+  position: relative;
+  padding-left: 2rem;
+}
+
+/* Línea vertical del timeline */
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 8px;
+  bottom: 8px;
+  width: 1px;
+  background: linear-gradient(to bottom, var(--accent), transparent);
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 2.5rem;
+}
+
+/* Punto en la línea */
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: -2rem;
+  top: 8px;
+  width: 9px;
+  height: 9px;
+  background: var(--accent);
+  border: 2px solid var(--bg);
+  border-radius: 50%;
+  box-shadow: 0 0 0 3px var(--accent-glow);
+}
+
+/* Cabecera clickable para expandir */
+.timeline-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 0.25rem;
+  cursor: pointer;
+}
+
+.timeline-company {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.timeline-period {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  white-space: nowrap;
+  margin-top: 0.2rem;
+}
+
+.timeline-role {
+  font-size: 0.88rem;
+  color: var(--accent);
+  font-weight: 500;
+  margin-bottom: 0.75rem;
+}
+
+/* Botón +/- para expandir */
+.timeline-toggle {
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  cursor: pointer;
+  font-size: 1rem;
+  padding: 0.25rem;
+  transition: all var(--transition);
+  flex-shrink: 0;
+  margin-top: 0.1rem;
+  line-height: 1;
+}
+
+.timeline-toggle:hover { color: var(--accent); }
+
+/* Lista de tareas (colapsable) */
+.timeline-items {
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.timeline-items.open { max-height: 800px; }
+
+.timeline-items li {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.65;
+  padding: 0.3rem 0;
+  padding-left: 1.1rem;
+  position: relative;
+}
+
+/* Flecha decorativa en cada item */
+.timeline-items li::before {
+  content: '›';
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+  font-size: 1rem;
+  line-height: 1.65;
+}

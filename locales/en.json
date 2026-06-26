@@ -1,0 +1,159 @@
+{
+  "nav": {
+    "about": "About",
+    "stack": "Stack",
+    "experience": "Experience",
+    "projects": "Projects",
+    "contact": "Contact"
+  },
+  "hero": {
+    "greeting": "Hi, I'm",
+    "name": "Javier Botella",
+    "roles": [
+      "Backend Developer",
+      "Android Developer",
+      "Java · Spring Boot · Kotlin",
+      "From code to deployment"
+    ],
+    "description": "Backend and Android with real production experience. I build REST APIs, native mobile apps and the infrastructure that supports them.",
+    "cta_cv": "Download CV",
+    "cta_contact": "Contact",
+    "cta_github": "GitHub",
+    "available": "Available for immediate start"
+  },
+  "about": {
+    "title": "About",
+    "p1": "I've been working in real environments for a while: production systems, critical migrations, government service integrations and apps that real people use. I don't just make code work — I care about understanding why it works and what happens when it doesn't.",
+    "p2": "My differentiator is the full cycle: I can write the API, containerize the application, configure observability and deploy with CI/CD. That gives context to every technical decision.",
+    "location": "Málaga, Spain",
+    "status": "CFGS DAW · IES Politécnico Jesús Marín",
+    "languages": "ES native · EN technical fluency",
+    "focus": "Backend & Android"
+  },
+  "stack": {
+    "title": "Stack",
+    "categories": {
+      "languages": "Languages",
+      "backend": "Backend & APIs",
+      "mobile": "Mobile",
+      "devops": "DevOps & Infra",
+      "observability": "Observability & Security",
+      "methods": "Methodologies"
+    }
+  },
+  "experience": {
+    "title": "Experience",
+    "present": "Present",
+    "jobs": [
+      {
+        "company": "Diputación Provincial de Málaga",
+        "role": "Web Developer & DevOps · Internship",
+        "period": "May 2026 – Jun 2026",
+        "items": [
+          "Audit, statistics, roles and users modules for a Laravel API documented with Swagger",
+          "RabbitMQ queue system (Python/PHP): priorities, automatic retries and unit tests for bulk SMS sending",
+          "PHP app containerization with Nginx Proxy Manager and SQL Server, orchestrated with Docker Compose",
+          "Jenkins deployment in Docker as CI/CD engine with private image registry",
+          "Centralized log platform with ELK Stack + Filebeat and integration of government service SCSP_WS"
+        ]
+      },
+      {
+        "company": "MetaData S.L.",
+        "role": "Java & Android Developer · Internship + Contract",
+        "period": "Mar 2024 – Nov 2024",
+        "items": [
+          "Maintenance of production Android attendance app alongside RESTful APIs in Quarkus",
+          "Full design and development of Ansible ecosystem for automated hardening of Windows, CentOS and Rocky Linux servers",
+          "Wazuh (SCA) audit for ENS 2022 and ISO 27001/22 compliance with Zabbix and Elasticsearch monitoring",
+          "Internal automation with Python: Bitbucket branch cleanup, PR authorship validation, Elasticsearch index management",
+          "CI/CD pipeline maintenance in Bitbucket and active participation in ENS 2022 and ISO 27001/22 certification audits"
+        ]
+      },
+      {
+        "company": "Inerttia",
+        "role": "Java & Android Developer · Internship",
+        "period": "Mar 2023 – Jun 2023",
+        "items": [
+          "Full CRUD with JSF and PrimeFaces for internal management with filters, sorting and Excel export",
+          "Android apps with MVVM architecture (Java and Kotlin), SQLite persistence and REST API consumption"
+        ]
+      },
+      {
+        "company": "Avanzada 7, S.L.",
+        "role": "Systems & VoIP Technician · Internship",
+        "period": "Jan 2022 – Apr 2022",
+        "items": [
+          "Configuration and certification of FreePBX/PBXAct PBXs and VoIP terminals",
+          "Automated maintenance script with Ansible, PHP and Bash; fixed FOP2/TreeMT integration bug by migrating from Perl to PHP"
+        ]
+      }
+    ]
+  },
+  "projects": {
+    "title": "Projects",
+    "view_code": "Code",
+    "view_demo": "Demo",
+    "items": [
+      {
+        "name": "TheMechanic",
+        "subtitle": "REST API + Android App",
+        "description": "Complete garage management system. Spring Boot 4 backend with feature-based architecture, JWT with roles, PostgreSQL, Flyway and OpenAPI. Native Android client in Kotlin with Jetpack Compose, Clean Architecture + MVVM, Hilt and Retrofit.",
+        "tags": ["Java", "Kotlin", "Spring Boot", "PostgreSQL", "Docker", "Jetpack Compose"],
+        "links": [
+          { "label": "Spring Boot", "url": "https://github.com/JaviBot00/TheMechanic-SpringBoot" },
+          { "label": "Android", "url": "https://github.com/JaviBot00/TheMechanic-Android" }
+        ]
+      },
+      {
+        "name": "Laravel API Blueprint",
+        "subtitle": "Reference RESTful API",
+        "description": "Laravel API template with JWT authentication, user management and role-based permissions, action auditing, usage statistics and Swagger documentation. Dockerized and designed as a migration guide from Slim PHP.",
+        "tags": ["PHP", "Laravel", "JWT", "Docker", "Swagger"],
+        "links": [
+          { "label": "GitHub", "url": "https://github.com/JaviBot00/Laravel-API-Blueprint" }
+        ]
+      },
+      {
+        "name": "RabbitMQ SMS System",
+        "subtitle": "Queue-based delivery control",
+        "description": "SMS control system with RabbitMQ and delayed exchange in Python. User-differentiated queues with configurable time windows, redundant event discarding and MySQL persistence.",
+        "tags": ["Python", "RabbitMQ", "MySQL", "Docker"],
+        "links": [
+          { "label": "GitHub", "url": "https://github.com/JaviBot00/RabbitMQ-SMS-Python" }
+        ]
+      },
+      {
+        "name": "Docker ELK Secure",
+        "subtitle": "Observability stack",
+        "description": "ELK stack (Elasticsearch, Logstash, Kibana) in Docker with free basic license and security optimized for local development. Base of the observability stack used in production.",
+        "tags": ["Docker", "Elasticsearch", "Logstash", "Kibana"],
+        "links": [
+          { "label": "GitHub", "url": "https://github.com/JaviBot00/Docker-ELK-Secure" }
+        ]
+      }
+    ]
+  },
+  "contact": {
+    "title": "Contact",
+    "subtitle": "Let's talk",
+    "description": "Open to opportunities, collaborations or just talking tech.",
+    "email_label": "Email",
+    "github_label": "GitHub",
+    "linkedin_label": "LinkedIn",
+    "form_name": "Name",
+    "form_email": "Email",
+    "form_message": "Message",
+    "form_send": "Send"
+  },
+  "footer": {
+    "built": "Built with HTML, CSS and JS · No frameworks",
+    "rights": "Javier Botella Muñoz"
+  },
+  "theme": {
+    "toggle_dark": "Dark mode",
+    "toggle_light": "Light mode"
+  },
+  "lang": {
+    "switch": "ES"
+  }
+}
