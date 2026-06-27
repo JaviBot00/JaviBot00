@@ -7,34 +7,40 @@
   padding-left: 2rem;
 }
 
-/* Línea vertical del timeline */
-.timeline::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 8px;
-  bottom: 8px;
-  width: 1px;
-  background: linear-gradient(to bottom, var(--accent), transparent);
-}
-
 .timeline-item {
   position: relative;
   margin-bottom: 2.5rem;
 }
 
-/* Punto en la línea */
+/* Punto */
 .timeline-item::before {
   content: '';
   position: absolute;
   left: -2rem;
-  top: 8px;
+  /* top: 8px; */
   width: 9px;
   height: 9px;
   background: var(--accent);
   border: 2px solid var(--bg);
   border-radius: 50%;
   box-shadow: 0 0 0 3px var(--accent-glow);
+}
+
+/* Línea de todos los items menos el último: color sólido */
+.timeline-item::after {
+  content: '';
+  position: absolute;
+  left: calc(-2rem + 4px);
+  top: 8px;
+  bottom: -2.5rem; /* ajusta este valor para la separación entre items */
+  width: 1px;
+  background: var(--accent);
+}
+
+/* Solo el último item tiene el degradado hacia transparente */
+.timeline-item:last-child::after {
+  background: linear-gradient(to bottom, var(--accent), transparent);
+  bottom: 0;
 }
 
 /* Cabecera clickable para expandir */
