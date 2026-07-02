@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96" width="96" height="96">
+  <rect width="96" height="96" rx="18" fill="#0e0e0e"/>
+  <rect x="4" y="8" width="88" height="88" rx="14" fill="#2a2a2a"/>
+  <rect x="4" y="4" width="88" height="88" rx="14" fill="#1e1e1e"/>
+  <rect x="14" y="14" width="68" height="68" rx="7" fill="#161616" stroke="#333" stroke-width="0.5"/>
+  <line x1="9"  y1="9"  x2="12" y2="12" stroke="#444" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="87" y1="9"  x2="84" y2="12" stroke="#444" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="9"  y1="87" x2="12" y2="84" stroke="#444" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="87" y1="87" x2="84" y2="84" stroke="#444" stroke-width="1.5" stroke-linecap="round"/>
+  <!-- J -->
+  <line x1="27" y1="31" x2="34" y2="31" stroke="#f0f0f0" stroke-width="3" stroke-linecap="round"/>
+  <line x1="34" y1="31" x2="34" y2="52" stroke="#f0f0f0" stroke-width="3" stroke-linecap="round"/>
+  <path d="M34 52 Q34 63 27 63 Q22 63 21 59" fill="none" stroke="#f0f0f0" stroke-width="3" stroke-linecap="round"/>
+  <!-- B -->
+  <line x1="43" y1="31" x2="43" y2="63" stroke="#f0f0f0" stroke-width="3" stroke-linecap="round"/>
+  <path d="M43 31 Q54 31 54 39 Q54 47 43 47" fill="none" stroke="#f0f0f0" stroke-width="3" stroke-linecap="round"/>
+  <path d="M43 47 Q56 47 56 55 Q56 63 43 63" fill="none" stroke="#f0f0f0" stroke-width="3" stroke-linecap="round"/>
+  <!-- cursor -->
+  <line x1="58" y1="63" x2="68" y2="63" stroke="#cc2222" stroke-width="3" stroke-linecap="round"/>
+</svg>
