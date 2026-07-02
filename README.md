@@ -8,7 +8,7 @@
 
 <br/>
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0e0e0e?style=flat-square&logo=linkedin&logoColor=cc2222)](https://www.linkedin.com/in/javier-botella-mu%C3%B1oz-a58928186/)
+[![LinkedIn](https://custom-icon-badges.demolab.com/badge/LinkedIn-0e0e0e?style=flat-square&logo=linkedin-white&logoColor=f0f0f0)](https://www.linkedin.com/in/javier-botella-mu%C3%B1oz-a58928186/)
 [![Email](https://img.shields.io/badge/Email-0e0e0e?style=flat-square&logo=gmail&logoColor=cc2222)](mailto:javibot00@gmail.com)
 [![Portfolio](https://img.shields.io/badge/Portfolio-0e0e0e?style=flat-square&logo=googlechrome&logoColor=cc2222)](https://javibot00.github.io/JaviBot00/)
 
@@ -20,7 +20,7 @@
 
 Desarrollador **Backend & Android** afincado en Málaga. Construyo APIs REST en Java/Spring Boot y aplicaciones Android nativas en Kotlin, y llevo ambas de local a producción: contenerización, CI/CD y observabilidad incluidos.
 
-Estoy terminando el CFGS DAW en IES Politécnico Jesús Marín mientras desarrollo **TheMechanic**, un sistema de gestión de talleres con backend en Spring Boot 4 y cliente Android en Kotlin/Jetpack Compose. He pasado por la Diputación Provincial de Málaga y por MetaData S.L., donde diseñé y desarrollé en solitario el ecosistema de automatización sobre Ansible, Wazuh y Azure DevOps.
+Estoy terminando el CFGS DAW en IES Politécnico Jesús Marín mientras desarrollo **TheMechanic**, un sistema de gestión de talleres con backend en Spring Boot 4 y cliente Android en Kotlin/Jetpack Compose. He pasado por la Diputación Provincial de Málaga y por MetaData S.L., donde diseñé y desarrollé el ecosistema de automatización sobre Ansible, Wazuh y Azure DevOps.
 
 ---
 
