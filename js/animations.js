@@ -5,65 +5,6 @@
 const Animations = (() => {
 
   /* ----------------------------------------------------------
-     TYPING EFFECT (hero)
-     Escribe y borra las frases del array roles del i18n.
-  ---------------------------------------------------------- */
-  let typingTimer = null;
-
-  function startTyping() {
-    const el = document.getElementById('hero-role-text');
-    if (!el) return;
-
-    const roles = I18n.get('hero.roles') || [];
-    if (!roles.length) return;
-
-    let roleIndex = 0;
-    let charIndex = 0;
-    let deleting = false;
-    const SPEED_TYPE   = 65;
-    const SPEED_DELETE = 35;
-    const PAUSE_END    = 1800;
-    const PAUSE_START  = 400;
-
-    function tick() {
-      const current = roles[roleIndex];
-
-      if (!deleting) {
-        // Escribiendo
-        el.textContent = current.slice(0, charIndex + 1);
-        charIndex++;
-
-        if (charIndex === current.length) {
-          // Pausa al llegar al final antes de borrar
-          deleting = true;
-          typingTimer = setTimeout(tick, PAUSE_END);
-          return;
-        }
-      } else {
-        // Borrando
-        el.textContent = current.slice(0, charIndex - 1);
-        charIndex--;
-
-        if (charIndex === 0) {
-          deleting = false;
-          roleIndex = (roleIndex + 1) % roles.length;
-          typingTimer = setTimeout(tick, PAUSE_START);
-          return;
-        }
-      }
-
-      typingTimer = setTimeout(tick, deleting ? SPEED_DELETE : SPEED_TYPE);
-    }
-
-    clearTimeout(typingTimer);
-    charIndex = 0;
-    deleting = false;
-    roleIndex = 0;
-    el.textContent = '';
-    tick();
-  }
-
-  /* ----------------------------------------------------------
      SCROLL REVEAL
      IntersectionObserver para animar elementos .reveal
      cuando entran en el viewport.
@@ -132,8 +73,7 @@ const Animations = (() => {
     initReveal();
     initNavHighlight();
     initScrollTop();
-    // El typing se inicia desde main.js después de cargar i18n
   }
 
-  return { init, startTyping };
+  return { init };
 })();

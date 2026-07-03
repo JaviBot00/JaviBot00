@@ -14,9 +14,7 @@ const Theme = (() => {
   function apply(theme) {
     document.documentElement.setAttribute('data-theme', theme);
     localStorage.setItem(KEY, theme);
-    // Actualiza el icono del botón de tema en el nav
-    const btn = document.getElementById('theme-toggle');
-    if (btn) btn.textContent = theme === 'dark' ? '☀️' : '🌙';
+    // El icono (sol/luna) lo alterna CSS a partir de [data-theme], ver layout.css
   }
 
   function toggle() {
@@ -51,36 +49,6 @@ function initMobileNav() {
   links.querySelectorAll('a').forEach(a => {
     a.addEventListener('click', () => links.classList.remove('open'));
   });
-}
-
-
-/* ----------------------------------------------------------
-   RENDER: HERO TERMINAL
-   Contenido estático del bloque terminal decorativo.
-   No usa i18n porque es "código" y queda igual en ambos idiomas.
----------------------------------------------------------- */
-function renderTerminal() {
-  const el = document.getElementById('terminal-body');
-  if (!el) return;
-
-  el.innerHTML = `
-    <div><span class="t-comment"># javier_botella.yaml</span></div>
-    <div>&nbsp;</div>
-    <div><span class="t-key">nombre</span>:     <span class="t-str">"Javier Botella Muñoz"</span></div>
-    <div><span class="t-key">ubicación</span>:  <span class="t-str">"Málaga, España 🇪🇸"</span></div>
-    <div><span class="t-key">rol</span>:        <span class="t-str">"Backend & Android"</span></div>
-    <div>&nbsp;</div>
-    <div><span class="t-key">stack_core</span>:</div>
-    <div>&nbsp; - <span class="t-val">Java 21</span> + <span class="t-val">Spring Boot 4</span></div>
-    <div>&nbsp; - <span class="t-val">Kotlin</span> + <span class="t-val">Jetpack Compose</span></div>
-    <div>&nbsp; - <span class="t-val">Laravel</span> / <span class="t-val">PHP</span></div>
-    <div>&nbsp; - <span class="t-val">Docker</span> + <span class="t-val">PostgreSQL</span></div>
-    <div>&nbsp;</div>
-    <div><span class="t-key">experiencia</span>: <span class="t-accent">producción real ✓</span></div>
-    <div><span class="t-key">ciclo</span>:       <span class="t-accent">código → despliegue ✓</span></div>
-    <div>&nbsp;</div>
-    <div><span class="t-prompt">$</span> <span class="t-val">disponible --inmediato</span></div>
-  `;
 }
 
 
@@ -263,9 +231,9 @@ function renderContactLinks() {
   const t = I18n.get('contact') || {};
 
   const links = [
-    { icon: '✉️', label: t.email_label,    href: 'mailto:javibot00@gmail.com',                            text: 'javibot00@gmail.com' },
-    { icon: '💻', label: t.github_label,   href: 'https://github.com/JaviBot00',                          text: 'github.com/JaviBot00' },
-    { icon: '🔗', label: t.linkedin_label, href: 'https://www.linkedin.com/in/javier-botella-mu%C3%B1oz-a58928186/', text: 'linkedin.com/in/javier-botella-muñoz' },
+    { icon: 'MAIL', label: t.email_label,    href: 'mailto:javibot00@gmail.com',                            text: 'javibot00@gmail.com' },
+    { icon: 'GIT',  label: t.github_label,   href: 'https://github.com/JaviBot00',                          text: 'github.com/JaviBot00' },
+    { icon: 'IN',   label: t.linkedin_label, href: 'https://www.linkedin.com/in/javier-botella-mu%C3%B1oz-a58928186/', text: 'linkedin.com/in/javier-botella-muñoz' },
   ];
 
   container.innerHTML = links.map(l => `
@@ -292,7 +260,7 @@ function initContactForm() {
     const btn    = form.querySelector('button[type="submit"]');
 
     btn.disabled = true;
-    btn.textContent = '⏳';
+    btn.textContent = '···';
 
     try {
       // TODO: conectar con Formspree o EmailJS
@@ -332,7 +300,6 @@ function initLangToggle() {
   btn.addEventListener('click', async () => {
     await I18n.toggle();
     renderAll(); // re-renderiza el contenido dinámico
-    Animations.startTyping(); // reinicia el typing con las nuevas frases
     btn.textContent = I18n.get('lang.switch');
   });
 
@@ -368,7 +335,6 @@ document.addEventListener('DOMContentLoaded', async () => {
   await I18n.init();
 
   // 3. Contenido dinámico
-  renderTerminal();
   renderAll();
 
   // 4. Botones de nav
@@ -377,7 +343,6 @@ document.addEventListener('DOMContentLoaded', async () => {
 
   // 5. Animaciones
   Animations.init();
-  Animations.startTyping();
 
   // 6. Formulario
   initContactForm();

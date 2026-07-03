@@ -6,12 +6,12 @@
 /* --- Tablet / pantallas medianas (≤ 900px) --- */
 @media (max-width: 900px) {
 
-  /* Hero: una sola columna, ocultar terminal */
+  /* Hero: una sola columna, ocultar el icono grande */
   .hero-inner {
     grid-template-columns: 1fr;
   }
 
-  .hero-terminal {
+  .hero-visual {
     display: none;
   }
 

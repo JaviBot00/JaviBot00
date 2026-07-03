@@ -1,5 +1,5 @@
 /* ============================================================
-   HERO.CSS — Sección principal y terminal decorativa
+   HERO.CSS — Sección principal
    ============================================================ */
 
 #hero {
@@ -19,7 +19,7 @@
   right: -10%;
   width: 600px;
   height: 600px;
-  background: radial-gradient(circle, rgba(108,99,255,0.12) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(204,34,34,0.12) 0%, transparent 70%);
   border-radius: 50%;
   pointer-events: none;
 }
@@ -75,18 +75,12 @@
   margin-bottom: 0.5rem;
 }
 
-/* Texto animado con cursor */
 .hero-role {
   font-family: var(--font-mono);
   font-size: clamp(1rem, 2vw, 1.25rem);
   color: var(--accent);
-  min-height: 2em;
   margin-bottom: 1.5rem;
   font-weight: 500;
-}
-
-.hero-role .cursor {
-  animation: blink 1s infinite;
 }
 
 .hero-desc {
@@ -115,52 +109,16 @@
 }
 
 /* ============================================================
-   TERMINAL (columna derecha del hero)
+   ICONO DE MARCA (columna derecha del hero)
    ============================================================ */
-.hero-terminal {
-  background: var(--bg-card);
-  border: 1px solid var(--border-subtle);
-  border-radius: var(--radius-lg);
-  overflow: hidden;
-  font-family: var(--font-mono);
-  font-size: 0.82rem;
-  line-height: 1.9;
-}
-
-.terminal-bar {
+.hero-visual {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
-  padding: 0.75rem 1rem;
-  border-bottom: 1px solid var(--border-subtle);
-  background: rgba(255,255,255,0.02);
+  justify-content: center;
 }
 
-.terminal-dots { display: flex; gap: 6px; }
-
-.terminal-dot {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
+.hero-icon {
+  width: min(320px, 60%);
+  aspect-ratio: 1;
+  filter: drop-shadow(0 20px 60px var(--accent-glow));
 }
-
-.dot-red    { background: #FF5F57; }
-.dot-yellow { background: #FFBD2E; }
-.dot-green  { background: #27C840; }
-
-.terminal-title {
-  font-size: 0.72rem;
-  color: var(--text-muted);
-  margin-left: auto;
-  letter-spacing: 0.04em;
-}
-
-.terminal-body { padding: 1.25rem 1.5rem; }
-
-/* Colores de sintaxis de la terminal */
-.t-comment { color: var(--text-muted); }
-.t-key     { color: #7DD3FC; }  /* azul claro */
-.t-val     { color: #86EFAC; }  /* verde claro */
-.t-str     { color: #FCA5A5; }  /* rosa claro */
-.t-accent  { color: var(--accent); }
-.t-prompt  { color: var(--accent); font-weight: 600; user-select: none; }
