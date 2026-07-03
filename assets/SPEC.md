@@ -36,7 +36,7 @@
 
 ---
 
-## Banner tipográfico — `jbotella-banner-dark.svg` / `jbotella-banner-light.svg`
+## Banner tipográfico — `banner-dark.svg` / `banner-light.svg`
 
 **ViewBox:** `0 0 1032 265`  
 **Tamaño exportado:** 1032 × 265px
@@ -65,7 +65,7 @@
 
 ---
 
-## Icono / Avatar — `jbotella-icon-96.svg`
+## Icono / Avatar — `icon-96.svg`
 
 **ViewBox:** `0 0 96 96` — cuadrado, escalar con CSS (`width`/`height`)
 
@@ -95,7 +95,7 @@ _  cursor      x1=58,y1=63 → x2=68,y2=63  stroke #cc2222
 
 ---
 
-## Favicon — `jbotella-favicon-24.svg`
+## Favicon — `favicon-24.svg`
 
 A 24px el monograma es ilegible. Solo cursor rojo centrado en la tecla:
 
@@ -109,18 +109,19 @@ A 24px el monograma es ilegible. Solo cursor rojo centrado en la tecla:
 
 | Contexto              | Archivo                          | Notas                              |
 |-----------------------|----------------------------------|------------------------------------|
-| GitHub avatar         | `jbotella-icon-96.svg`           | Escalar a 96×96 o 400×400          |
-| Favicon web           | `jbotella-favicon-24.svg`        | Convertir a `.ico` con RealFavicon |
-| Cabecera portfolio    | `jbotella-banner-dark.svg`       | Embeber inline o `<img>`           |
-| Fondo claro           | `jbotella-banner-light.svg`      | —                                  |
-| Firma email           | `jbotella-banner-dark.svg`       | Fondo transparente: quitar `<rect>`|
+| GitHub avatar         | `icon-96.svg`                    | Escalar a 96×96 o 400×400          |
+| Favicon web           | `favicon-24.svg`                 | Convertir a `.ico` con RealFavicon |
+| Cabecera portfolio    | `banner-dark.svg`                | Embeber inline o `<img>`           |
+| Fondo claro           | `banner-light.svg`               | —                                  |
+| Firma email           | `banner-dark.svg`                | Fondo transparente: quitar `<rect>`|
 | Paquetería npm/maven  | texto `jbotella`                 | Sin SVG                            |
 
 ---
 
 ## Changelog
 
-- **v1.2** — Recalibradas las líneas rojas y el eslogan del wordmark (`jbotella-banner-dark.svg` / `jbotella-banner-light.svg`) por medición de píxeles contra la captura aprobada por el usuario, en lugar de estimación manual. `jbotella-icon-96.svg` y `jbotella-favicon-24.svg` no se modificaron — no hay captura de referencia para ellos.
+- **v1.2** — Recalibradas las líneas rojas y el eslogan del wordmark (`banner-dark.svg` / `banner-light.svg`) por medición de píxeles contra la captura aprobada por el usuario, en lugar de estimación manual. `icon-96.svg` y `favicon-24.svg` no se modificaron — no hay captura de referencia para ellos.
+- **v1.3** — Corregidos los nombres de archivo documentados: el SPEC refería `jbotella-banner-dark.svg` etc. con prefijo, pero los archivos reales en `assets/` nunca lo tuvieron. El README raíz e `index.html` ya usaban los nombres reales; se actualizó el SPEC para que coincida, no al revés.
 - **v1.1** — Versión con coordenadas de líneas y tamaño de eslogan estimados manualmente (deprecada; ver nota de calibración arriba).
 
 ## Restricciones
