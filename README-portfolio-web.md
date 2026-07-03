@@ -17,7 +17,7 @@ Portfolio personal desplegado en GitHub Pages dentro del mismo repo de perfil (`
 │   ├── reset.css           # Normalización, base body, scrollbar
 │   ├── layout.css          # Nav, contenedor, secciones, footer, botones globales
 │   ├── animations.css      # Keyframes y clases .reveal
-│   ├── hero.css            # Sección hero y terminal decorativa
+│   ├── hero.css            # Sección hero (icono de marca en vez de terminal)
 │   ├── about.css           # Sección "Sobre mí", avatar, stats
 │   ├── stack.css           # Tags de tecnologías
 │   ├── experience.css      # Timeline colapsable de experiencia
@@ -28,12 +28,20 @@ Portfolio personal desplegado en GitHub Pages dentro del mismo repo de perfil (`
 │
 ├── js/
 │   ├── i18n.js             # Sistema de internacionalización (ES/EN)
-│   ├── animations.js       # Typing effect, scroll reveal, nav activo
+│   ├── animations.js       # Scroll reveal, nav activo por scroll
 │   └── main.js             # Orquestador: tema, renders dinámicos, formulario
 │
 ├── locales/
 │   ├── es.json             # Todos los textos en español
 │   └── en.json             # Todos los textos en inglés
+│
+├── assets/
+│   ├── SPEC.md             # Especificación de marca (paleta, tipografía, logo)
+│   ├── icon-96.svg         # Icono de marca (nav, hero, favicon base)
+│   ├── favicon-24.svg
+│   ├── banner-dark.svg     # Banner del README de perfil (modo oscuro)
+│   ├── banner-light.svg    # Banner del README de perfil (modo claro)
+│   └── foto.jpg            # ⚠️ Pendiente — ver sección "Foto" más abajo
 │
 └── docs/
     └── CV_Javier_Botella.pdf   # CV descargable
@@ -43,15 +51,16 @@ Portfolio personal desplegado en GitHub Pages dentro del mismo repo de perfil (`
 
 ## Funcionalidades
 
-| Feature               | Dónde está                              |
-|-----------------------|-----------------------------------------|
-| Tema oscuro / claro   | `js/main.js` → `Theme`                  |
-| Bilingüe ES / EN      | `js/i18n.js` + `locales/*.json`         |
-| Typing animation      | `js/animations.js` → `startTyping`      |
-| Scroll reveal         | `js/animations.js` → `initReveal`       |
-| Timeline expandible   | `js/main.js` → `toggleTimeline`         |
-| Nav activo por scroll | `js/animations.js` → `initNavHighlight` |
-| Formulario de contacto| `js/main.js` → `initContactForm`        |
+| Feature                                               | Dónde está                                                |
+|-------------------------------------------------------|-----------------------------------------------------------|
+| Tema oscuro / claro (icono sol/luna, sin JS ni emoji) | `css/layout.css` `.theme-toggle` + `js/main.js` → `Theme` |
+| Bilingüe ES / EN                                      | `js/i18n.js` + `locales/*.json`                           |
+| Scroll reveal                                         | `js/animations.js` → `initReveal`                         |
+| Timeline expandible                                   | `js/main.js` → `toggleTimeline`                           |
+| Nav activo por scroll                                 | `js/animations.js` → `initNavHighlight`                   |
+| Formulario de contacto                                | `js/main.js` → `initContactForm`                          |
+
+**Nota:** `#stack` ya no es una sección de nivel superior en el nav. Vive como subsección justo debajo de `#about` (`.subsection` en `css/layout.css`) para no repetir el patrón `section-label` + `section-title` seis veces seguidas. Si en el futuro se separa de nuevo, hay que devolverle su entrada en `nav.about` (locales) y en `<ul class="nav-links">`.
 
 ---
 
@@ -83,7 +92,7 @@ Array `experience.jobs` en ambos JSON. El orden del array es el orden del timeli
 
 ### Foto
 
-1. Copia tu foto a `assets/foto.jpg` (crea la carpeta `assets/`)
+1. Copia tu foto a `assets/foto.jpg` (la carpeta `assets/` ya existe — contiene `SPEC.md` y los assets de marca, no la crees de nuevo)
 2. En `index.html`, dentro de `#about`, descomenta la línea `<img ...>` y comenta/elimina el bloque `.about-avatar-placeholder`
 
 ### CV
@@ -92,7 +101,7 @@ Reemplaza `docs/CV_Javier_Botella.pdf` con la versión actualizada. El nombre de
 
 ### Colores de acento
 
-Cambia `--accent` en `css/tokens.css`. El resto de variables derivadas (`--accent-dim`, `--accent-glow`, `--accent-subtle`) se calculan visualmente; ajústalas si cambias mucho el color base.
+La paleta viene de `assets/SPEC.md` (marca oficial JBotella): `--accent: #cc2222` sobre `--bg: #0e0e0e`. No cambies `--accent` sin revisar antes el SPEC — es la misma paleta usada en el README de perfil, el CV y los assets (banner, icono, favicon). Si algún día se actualiza el color de marca, el cambio empieza en `assets/SPEC.md`, no aquí.
 
 ---
 
@@ -145,9 +154,11 @@ Si el repo ya tiene un `index.html` de otro contenido, mueve ese contenido a una
 ## Checklist pre-deploy
 
 - [ ] CV actualizado en `docs/`
-- [ ] Foto añadida en `assets/` y activada en `index.html` (opcional)
+- [ ] Foto añadida en `assets/foto.jpg` y activada en `index.html` (placeholder "JB" sigue activo)
 - [ ] Formulario conectado a Formspree / EmailJS
 - [ ] `og:url` en `index.html` apunta a la URL real
+- [ ] Dominio `javierb.dev` — cuando esté activo, actualizar el link "Portfolio" en el `README.md` raíz (hoy apunta a `javibot00.github.io/JaviBot00`)
+- [ ] Badge de LinkedIn en `README.md` raíz usa `custom-icon-badges.demolab.com` (mirror de terceros, no `img.shields.io`) por un bug conocido de Simple Icons con fondos no oficiales — si deja de responder, sustituir por SVG propio en `assets/`
 - [ ] Revisado en móvil (Chrome DevTools → responsive)
 - [ ] Revisado con `prefers-reduced-motion` activado
 - [ ] Revisado en modo claro y oscuro
