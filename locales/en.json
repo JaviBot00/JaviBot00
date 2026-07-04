@@ -10,7 +10,7 @@
     "greeting": "Hi, I'm",
     "name": "Javier Botella",
     "role": "Backend & Android Developer",
-    "description": "Backend and Android with real production experience. I build REST APIs, native mobile apps and the infrastructure that supports them.",
+    "description": "I build REST APIs, native Android apps and the infrastructure that supports them. Backend and Android end-to-end.",
     "cta_cv": "Download CV",
     "cta_contact": "Contact",
     "cta_github": "GitHub",
@@ -18,9 +18,8 @@
   },
   "about": {
     "title": "About",
-    "p1": "I've been working in real environments for a while: production systems, critical migrations, government service integrations and apps that real people use. I don't just make code work — I care about understanding why it works and what happens when it doesn't.",
-    "p2": "My differentiator is the full cycle: I can write the API, containerize the application, configure observability and deploy with CI/CD. That gives context to every technical decision.",
-    "location": "Málaga, Spain",
+    "p1": "I work with production systems, critical migrations and government service integrations. What I build works outside my machine, with real data and real users.",
+    "p2": "I cover the full cycle: I write the API, containerize it, configure observability and deploy with CI/CD. That gives me decision-making judgment, not just execution capacity.",    "location": "Málaga, Spain",
     "status": "CFGS DAW · IES Politécnico Jesús Marín",
     "languages": "ES native · EN technical fluency",
     "focus": "Backend & Android"
@@ -42,7 +41,7 @@
     "jobs": [
       {
         "company": "Diputación Provincial de Málaga",
-        "role": "Web Developer & DevOps · Internship",
+        "role": "Web Developer & DevOps",
         "period": "May 2026 – Jun 2026",
         "items": [
           "Audit, statistics, roles and users modules for a Laravel API documented with Swagger",
@@ -54,7 +53,7 @@
       },
       {
         "company": "MetaData S.L.",
-        "role": "Java & Android Developer · Internship + Contract",
+        "role": "Java & Android Developer",
         "period": "Mar 2024 – Nov 2024",
         "items": [
           "Maintenance of production Android attendance app alongside RESTful APIs in Quarkus",
@@ -66,7 +65,7 @@
       },
       {
         "company": "Inerttia",
-        "role": "Java & Android Developer · Internship",
+        "role": "Java & Android Developer",
         "period": "Mar 2023 – Jun 2023",
         "items": [
           "Full CRUD with JSF and PrimeFaces for internal management with filters, sorting and Excel export",
@@ -76,7 +75,7 @@
       },
       {
         "company": "Avanzada 7, S.L.",
-        "role": "Systems & VoIP Technician · Internship",
+        "role": "Systems & VoIP Technician",
         "period": "Jan 2022 – Apr 2022",
         "items": [
           "Configuration and certification of FreePBX/PBXAct PBXs and VoIP terminals",

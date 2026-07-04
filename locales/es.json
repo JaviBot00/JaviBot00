@@ -10,7 +10,7 @@
     "greeting": "Hola, soy",
     "name": "Javier Botella",
     "role": "Desarrollador Backend & Android",
-    "description": "Backend y Android con experiencia real en producción. Construyo APIs REST, aplicaciones móviles nativas y la infraestructura que las sostiene.",
+    "description": "Construyo APIs REST, aplicaciones Android nativas y la infraestructura que las sostiene. Backend y Android de punta a punta.",
     "cta_cv": "Descargar CV",
     "cta_contact": "Contacto",
     "cta_github": "GitHub",
@@ -18,8 +18,8 @@
   },
   "about": {
     "title": "Sobre mí",
-    "p1": "Llevo tiempo trabajando en entornos reales: sistemas en producción, migraciones críticas, integración de servicios gubernamentales y apps que usan personas de verdad. No me limito a hacer funcionar el código — me interesa entender por qué funciona y qué ocurre cuando no lo hace.",
-    "p2": "Mi punto diferencial es el ciclo completo: puedo escribir la API, contenerizar la aplicación, configurar la observabilidad y desplegar con CI/CD. Eso da contexto a cada decisión técnica.",
+    "p1": "Trabajo con sistemas en producción, migraciones críticas e integración de servicios gubernamentales. Lo que construyo funciona fuera de mi máquina, con datos reales y usuarios reales.",
+    "p2": "Cubro el ciclo completo: escribo la API, la contenerizo, configuro la observabilidad y despliego con CI/CD. Eso me da criterio de decisión, no solo capacidad de ejecución.",
     "location": "Málaga, España",
     "status": "CFGS DAW · IES Politécnico Jesús Marín",
     "languages": "ES nativo · EN técnico fluido",
@@ -42,7 +42,7 @@
     "jobs": [
       {
         "company": "Diputación Provincial de Málaga",
-        "role": "Desarrollador Web & DevOps · Prácticas",
+        "role": "Desarrollador Web & DevOps",
         "period": "May 2026 – Jun 2026",
         "items": [
           "Módulos de auditoría, estadísticas, roles y usuarios para API Laravel documentada con Swagger",
@@ -54,7 +54,7 @@
       },
       {
         "company": "MetaData S.L.",
-        "role": "Desarrollador Java & Android · Prácticas + Contrato",
+        "role": "Desarrollador Java & Android",
         "period": "Mar 2024 – Nov 2024",
         "items": [
           "Mantenimiento de app Android de control de presencia en producción junto con APIs RESTful en Quarkus",
@@ -66,7 +66,7 @@
       },
       {
         "company": "Inerttia",
-        "role": "Desarrollador Java & Android · Prácticas",
+        "role": "Desarrollador Java & Android",
         "period": "Mar 2023 – Jun 2023",
         "items": [
           "CRUD completo con JSF y PrimeFaces para gestión interna con filtros, ordenación y exportación a Excel",
@@ -76,7 +76,7 @@
       },
       {
         "company": "Avanzada 7, S.L.",
-        "role": "Técnico de Sistemas & VoIP · Prácticas",
+        "role": "Técnico de Sistemas & VoIP",
         "period": "Ene 2022 – Abr 2022",
         "items": [
           "Configuración y homologación de centralitas FreePBX/PBXAct y terminales VoIP",

@@ -18,9 +18,9 @@
 
 ### Sobre mí
 
-Desarrollador **Backend & Android** afincado en Málaga. Construyo APIs REST en Java/Spring Boot y aplicaciones Android nativas en Kotlin, y llevo ambas de local a producción: contenerización, CI/CD y observabilidad incluidos.
+Desarrollador **Backend & Android** afincado en Málaga. Construyo APIs REST en Java/Spring Boot y aplicaciones Android nativas en Kotlin, y las llevo de local a producción: contenerización, CI/CD y observabilidad incluidos.
 
-Estoy terminando el CFGS DAW en IES Politécnico Jesús Marín mientras desarrollo **TheMechanic**, un sistema de gestión de talleres con backend en Spring Boot 4 y cliente Android en Kotlin/Jetpack Compose. He pasado por la Diputación Provincial de Málaga y por MetaData S.L., donde diseñé y desarrollé el ecosistema de automatización sobre Ansible, Wazuh y Azure DevOps.
+Desarrollo **TheMechanic**, un sistema de gestión de talleres con backend en Spring Boot 4 y cliente Android en Kotlin/Jetpack Compose. He pasado por la Diputación Provincial de Málaga y por MetaData S.L., donde diseñé y desarrollé el ecosistema de automatización sobre Ansible, Wazuh y Azure DevOps.
 
 ---
 
