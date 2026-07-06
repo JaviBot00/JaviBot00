@@ -41,6 +41,17 @@
     "present": "Actualidad",
     "jobs": [
       {
+        "company": "UMD Films",
+        "role": "Responsable de desarrollo web",
+        "period": "May 2026 – Actualidad",
+        "items": [
+          "Diseño y desarrollo del sitio web de UMD Films, productora audiovisual malagueña (videoclips, publicidad, cine y producción musical)",
+          "Implementación de SEO y estructura de datos en JSON para servicios, equipo y proyectos",
+          "Modo día/noche y sistema de contacto directo por WhatsApp",
+          "Modelado de relación muchos-a-muchos entre proyectos y miembros del equipo"
+        ]
+      },
+      {
         "company": "Diputación Provincial de Málaga",
         "role": "Desarrollador Web & DevOps",
         "period": "May 2026 – Jun 2026",
@@ -118,13 +129,7 @@
         "name": "Laravel API Blueprint",
         "subtitle": "API RESTful de referencia",
         "description": "Plantilla de API Laravel con autenticación JWT, gestión de usuarios y permisos por roles, auditoría de acciones, estadísticas de uso y documentación Swagger. Dockerizada y pensada como guía de migración desde Slim PHP.",
-        "tags": [
-          "PHP",
-          "Laravel",
-          "JWT",
-          "Docker",
-          "Swagger"
-        ],
+        "tags": ["PHP", "Laravel", "JWT", "Docker", "Swagger"],
         "links": [
           {
             "label": "GitHub",
@@ -136,12 +141,7 @@
         "name": "RabbitMQ SMS System",
         "subtitle": "Control de envío con colas",
         "description": "Sistema de control de SMS con RabbitMQ y delayed exchange en Python. Colas diferenciadas por tipo de usuario con ventanas de tiempo configurables, descarte de eventos redundantes y persistencia en MySQL.",
-        "tags": [
-          "Python",
-          "RabbitMQ",
-          "MySQL",
-          "Docker"
-        ],
+        "tags": ["Python", "RabbitMQ", "MySQL", "Docker"],
         "links": [
           {
             "label": "GitHub",
@@ -153,12 +153,7 @@
         "name": "Docker ELK Secure",
         "subtitle": "Stack de observabilidad",
         "description": "Entorno ELK (Elasticsearch, Logstash, Kibana) en Docker con licencia basic gratuita y seguridad optimizada para desarrollo local. Base del stack de observabilidad usado en producción.",
-        "tags": [
-          "Docker",
-          "Elasticsearch",
-          "Logstash",
-          "Kibana"
-        ],
+        "tags": ["Docker", "Elasticsearch", "Logstash", "Kibana"],
         "links": [
           {
             "label": "GitHub",
@@ -177,58 +172,35 @@
         "center": "IES Politécnico Jesús Marín",
         "period": "2025 – 2027",
         "current": true,
-        "tags": [
-          "Java",
-          "Spring Boot",
-          "Laravel",
-          "JavaScript"
-        ]
+        "tags": ["Java", "Spring Boot", "Laravel", "JavaScript"]
       },
       {
         "degree": "CE Ciberseguridad en Entornos TIC",
         "center": "C.P.I.F.P. Alan Turing",
         "period": "2023 – 2024",
         "current": false,
-        "tags": [
-          "ENS 2022",
-          "ISO 27001",
-          "Wazuh",
-          "Hacking Ético"
-        ]
+        "tags": ["ENS 2022", "ISO 27001", "Wazuh", "Hacking Ético"]
       },
       {
         "degree": "CFGS Desarrollo de Aplicaciones Multiplataforma",
         "center": "IES Politécnico Jesús Marín",
         "period": "2021 – 2023",
         "current": false,
-        "tags": [
-          "Java",
-          "Kotlin",
-          "Android",
-          "SQL"
-        ]
+        "tags": ["Java", "Kotlin", "Android", "SQL"]
       },
       {
         "degree": "CFGS Administración de Sistemas Informáticos en Red",
         "center": "IES Politécnico Jesús Marín",
         "period": "2019 – 2022",
         "current": false,
-        "tags": [
-          "Linux",
-          "Redes",
-          "Bash",
-          "Virtualización"
-        ]
+        "tags": ["Linux", "Redes", "Bash", "Virtualización"]
       },
       {
         "degree": "Cursos: Spring Boot · Python",
         "center": "Udemy",
         "period": "Nov 2024 – May 2025",
         "current": false,
-        "tags": [
-          "Spring Boot",
-          "Python"
-        ]
+        "tags": ["Spring Boot", "Python"]
       }
     ]
   },
