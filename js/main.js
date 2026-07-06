@@ -349,11 +349,11 @@ function initContactForm() {
 
     try {
       // TODO: conectar con Formspree o EmailJS
-      // const res = await fetch("https://formspree.io/f/YOUR_ID", {
-      //   method: "POST",
-      //   headers: { "Content-Type": "application/json" },
-      //   body: JSON.stringify(Object.fromEntries(new FormData(form))),
-      // });
+      const res = await fetch("https://formspree.io/f/meebdaly", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(Object.fromEntries(new FormData(form))),
+      });
 
       // Simulación de éxito
       await new Promise((r) => setTimeout(r, 800));
