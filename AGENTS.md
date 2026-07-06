@@ -6,7 +6,7 @@ Personal portfolio website for Javier Botella Muñoz. Pure HTML/CSS/JS — no bu
 
 ## Structure
 
-```
+```cmd
 index.html              Entry point
 css/tokens.css          Design tokens (colors, fonts, spacing) — load FIRST
 css/                    Per-section stylesheets (loaded in index.html order)
@@ -43,13 +43,14 @@ Load a skill with the `skill` tool when the task matches its description.
 ## Brand spec
 
 `assets/SPEC.md` contains the full brand identity (palette, typography, SVG coordinates). Key constraints:
-- Accent color `#cc2222` is for branding assets only; the portfolio uses `#6C63FF` (defined in `css/tokens.css`).
+
+- Accent color `#cc2222` matches `assets/SPEC.md` exactly — same value in `css/tokens.css` (`--accent`), the brand assets, and the CV. No divergence between brand and portfolio palette.
 - SVG banner coords were calibrated against a real screenshot (v1.2) — do not guess coordinates.
 
 ## Common edits
 
 | Task | Where |
-|------|-------|
+|---|---|
 | Change accent color | `css/tokens.css` → `--accent` and derived vars |
 | Add/edit content text | `locales/es.json` and `locales/en.json` (keep both in sync) |
 | Add a project | `projects.items` array in both locale JSONs |
@@ -61,6 +62,5 @@ Load a skill with the `skill` tool when the task matches its description.
 ## Gotchas
 
 - The contact form is simulated — no real submission unless you wire up Formspree/EmailJS.
-- `renderStack()` in `js/main.js:91` has hardcoded tech categories (not from JSON). Category labels come from i18n but tag lists are static.
-- The terminal content in `renderTerminal()` is static and not internationalized.
+- `renderStack()` in `js/main.js:59` has hardcoded tech categories (not from JSON). Category labels come from i18n but tag lists are static.
 - The only CI workflow (`.github/workflows/snake.yml`) generates a snake animation SVG — it does not build or deploy the portfolio.

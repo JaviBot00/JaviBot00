@@ -1,84 +1,84 @@
 # Portfolio — Javier Botella Muñoz
 
-Portfolio personal desplegado en GitHub Pages dentro del mismo repo de perfil (`JaviBot00/JaviBot00`).
+Personal portfolio deployed on GitHub Pages inside the profile repo itself (`JaviBot00/JaviBot00`).
 
 **URL:** `https://javibot00.github.io/JaviBot00/`
 
 ---
 
-## Estructura del proyecto
+## Project structure
 
 ```cmd
 /
-├── index.html              # Punto de entrada. HTML semántico, sin lógica.
+├── index.html              # Entry point. Semantic HTML, no logic.
 │
 ├── css/
-│   ├── tokens.css          # Variables CSS: colores, fuentes, radios, transiciones
-│   ├── reset.css           # Normalización, base body, scrollbar
-│   ├── layout.css          # Nav, contenedor, secciones, footer, botones globales
-│   ├── animations.css      # Keyframes y clases .reveal
-│   ├── hero.css            # Sección hero (icono de marca en vez de terminal)
-│   ├── about.css           # Sección "Sobre mí", avatar, stats
-│   ├── stack.css           # Tags de tecnologías
-│   ├── experience.css      # Timeline colapsable de experiencia
-│   ├── education.css       # Grid de tarjetas de formación
-│   ├── projects.css        # Grid de proyectos y tarjetas
-│   ├── contact.css         # Formulario y links de contacto
-│   └── responsive.css      # Media queries (≤900px y ≤600px)
+│   ├── tokens.css          # CSS variables: colors, fonts, radii, transitions
+│   ├── reset.css           # Normalization, base body, scrollbar
+│   ├── layout.css          # Nav, container, sections, footer, global buttons
+│   ├── animations.css      # Keyframes and .reveal classes
+│   ├── hero.css            # Hero section (brand icon instead of terminal)
+│   ├── about.css           # "About" section, avatar, stats
+│   ├── stack.css           # Technology tags
+│   ├── experience.css      # Collapsible experience timeline
+│   ├── education.css       # Education card grid
+│   ├── projects.css        # Project grid and cards
+│   ├── contact.css         # Form and contact links
+│   └── responsive.css      # Media queries (≤900px and ≤600px)
 │
 ├── js/
-│   ├── i18n.js             # Sistema de internacionalización (ES/EN)
-│   ├── animations.js       # Scroll reveal, nav activo por scroll
-│   └── main.js             # Orquestador: tema, renders dinámicos, formulario
+│   ├── i18n.js             # Internationalization system (ES/EN)
+│   ├── animations.js       # Scroll reveal, scroll-based active nav
+│   └── main.js             # Orchestrator: theme, dynamic renders, form
 │
 ├── locales/
-│   ├── es.json             # Todos los textos en español
-│   └── en.json             # Todos los textos en inglés
+│   ├── es.json             # All content, Spanish
+│   └── en.json             # All content, English
 │
 ├── assets/
-│   ├── SPEC.md             # Especificación de marca (paleta, tipografía, logo)
-│   ├── icon-96.svg         # Icono de marca (nav, hero, favicon base)
+│   ├── SPEC.md             # Brand spec (palette, typography, logo)
+│   ├── icon-96.svg         # Brand icon (nav, hero, favicon base)
 │   ├── favicon-24.svg
-│   ├── banner-dark.svg     # Banner del README de perfil (modo oscuro)
-│   ├── banner-light.svg    # Banner del README de perfil (modo claro)
-│   └── foto.jpg            # ⚠️ Pendiente — ver sección "Foto" más abajo
+│   ├── banner-dark.svg     # Profile README banner (dark mode)
+│   ├── banner-light.svg    # Profile README banner (light mode)
+│   └── foto.jpg            # ⚠️ Pending — see "Photo" section below
 │
 └── docs/
-    └── CV_Javier_Botella.pdf   # CV descargable
+    └── CV_Javier_Botella.pdf   # Downloadable CV
 ```
 
 ---
 
-## Funcionalidades
+## Features
 
-| Feature                                               | Dónde está                                                |
-|-------------------------------------------------------|-----------------------------------------------------------|
-| Tema oscuro / claro (icono sol/luna, sin JS ni emoji) | `css/layout.css` `.theme-toggle` + `js/main.js` → `Theme` |
-| Bilingüe ES / EN                                      | `js/i18n.js` + `locales/*.json`                           |
-| Scroll reveal                                         | `js/animations.js` → `initReveal`                         |
-| Timeline expandible                                   | `js/main.js` → `toggleTimeline`                           |
-| Nav activo por scroll                                 | `js/animations.js` → `initNavHighlight`                   |
-| Formulario de contacto                                | `js/main.js` → `initContactForm`                          |
+| Feature | Where |
+|---|---|
+| Dark / light theme (sun/moon icon, no JS or emoji) | `css/layout.css` `.theme-toggle` + `js/main.js` → `Theme`|
+| Bilingual ES / EN                                  | `js/i18n.js` + `locales/*.json`                          |
+| Scroll reveal                                      | `js/animations.js` → `initReveal`                        |
+| Expandable timeline                                | `js/main.js` → `toggleTimeline`                          |
+| Scroll-based active nav                            | `js/animations.js` → `initNavHighlight`                  |
+| Contact form                                       | `js/main.js` → `initContactForm`                         |
 
-**Nota:** `#stack` ya no es una sección de nivel superior en el nav. Vive como subsección justo debajo de `#about` (`.subsection` en `css/layout.css`) para no repetir el patrón `section-label` + `section-title` seis veces seguidas. Si en el futuro se separa de nuevo, hay que devolverle su entrada en `nav.about` (locales) y en `<ul class="nav-links">`.
+**Note:** `#stack` is no longer a top-level nav section. It lives as a subsection directly under `#about` (`.subsection` in `css/layout.css`) to avoid repeating the `section-label` + `section-title` pattern six times in a row. If it's ever split out again, restore its entry in `nav.about` (locales) and in `<ul class="nav-links">`.
 
 ---
 
-## Cómo actualizar contenido
+## How to update content
 
-### Textos
+### Text
 
-Edita los archivos `locales/es.json` y `locales/en.json`. El JS los carga en tiempo de ejecución; no hace falta tocar el HTML.
+Edit `locales/es.json` and `locales/en.json`. The JS loads them at runtime — no need to touch the HTML.
 
-### Proyectos
+### Projects
 
-Añade o modifica el array `projects.items` en ambos JSON:
+Add or edit the `projects.items` array in both JSON files:
 
 ```json
 {
-  "name": "Nombre del proyecto",
-  "subtitle": "Subtítulo técnico",
-  "description": "Descripción breve.",
+  "name": "Project name",
+  "subtitle": "Technical subtitle",
+  "description": "Short description.",
   "tags": ["Java", "Docker"],
   "links": [
     { "label": "GitHub", "url": "https://github.com/JaviBot00/repo" }
@@ -86,79 +86,75 @@ Añade o modifica el array `projects.items` en ambos JSON:
 }
 ```
 
-### Experiencia
+### Experience
 
-Array `experience.jobs` en ambos JSON. El orden del array es el orden del timeline.
+`experience.jobs` array in both JSON files. Array order is timeline order.
 
-### Foto
+### Photo
 
-1. Copia tu foto a `assets/foto.jpg` (la carpeta `assets/` ya existe — contiene `SPEC.md` y los assets de marca, no la crees de nuevo)
-2. En `index.html`, dentro de `#about`, descomenta la línea `<img ...>` y comenta/elimina el bloque `.about-avatar-placeholder`
+1. Copy your photo to `assets/foto.jpg` (the `assets/` folder already exists — it holds `SPEC.md` and the brand assets, don't recreate it)
+2. In `index.html`, inside `#about`, uncomment the `<img ...>` line and comment out / remove the `.about-avatar-placeholder` block
 
 ### CV
 
-Reemplaza `docs/CV_Javier_Botella.pdf` con la versión actualizada. El nombre del archivo se puede cambiar en el `href` del botón en `index.html`.
+Replace `docs/CV_Javier_Botella.pdf` with the updated version. The filename can be changed in the button's `href` in `index.html`.
 
-### Colores de acento
+### Accent colors
 
-La paleta viene de `assets/SPEC.md` (marca oficial JBotella): `--accent: #cc2222` sobre `--bg: #0e0e0e`. No cambies `--accent` sin revisar antes el SPEC — es la misma paleta usada en el README de perfil, el CV y los assets (banner, icono, favicon). Si algún día se actualiza el color de marca, el cambio empieza en `assets/SPEC.md`, no aquí.
-
----
-
-## Formulario de contacto (configuración)
-
-El formulario por defecto simula el envío. Para activarlo con un servicio real:
-
-### Opción A — Formspree (gratuito, sin backend)
-
-1. Crea cuenta en [formspree.io](https://formspree.io)
-2. Crea un formulario y copia tu endpoint (`https://formspree.io/f/XXXXXXXX`)
-3. En `js/main.js`, función `initContactForm`, descomenta el bloque `fetch` y sustituye `YOUR_ID`
-
-### Opción B — EmailJS
-
-1. Crea cuenta en [emailjs.com](https://emailjs.com)
-2. Sigue su documentación para obtener `serviceID`, `templateID` y `publicKey`
-3. Añade su SDK en `index.html` y llámalo desde `initContactForm`
+The palette comes from `assets/SPEC.md` (official JBotella brand): `--accent: #cc2222` on `--bg: #0e0e0e`. Don't change `--accent` without checking `SPEC.md` first — it's the same palette used in the profile README, the CV, and the brand assets (banner, icon, favicon). If the brand color is ever updated, the change starts in `assets/SPEC.md`, not here.
 
 ---
 
-## Despliegue en GitHub Pages
+## Contact form (setup)
 
-El portfolio vive en el mismo repo que el README de perfil (`JaviBot00/JaviBot00`).
+The form simulates submission by default. To wire it up to a real service:
 
-### Configuración necesaria (una sola vez)
+### Option A — Formspree (free, no backend)
 
-1. Ve a **Settings → Pages** en el repo
+1. Create an account at [formspree.io](https://formspree.io)
+2. Create a form and copy your endpoint (`https://formspree.io/f/XXXXXXXX`)
+3. In `js/main.js`, `initContactForm` function, uncomment the `fetch` block and replace `YOUR_ID`
+
+### Option B — EmailJS
+
+1. Create an account at [emailjs.com](https://emailjs.com)
+2. Follow their docs to get `serviceID`, `templateID` and `publicKey`
+3. Add their SDK in `index.html` and call it from `initContactForm`
+
+---
+
+## GitHub Pages deployment
+
+The portfolio lives in the same repo as the profile README (`JaviBot00/JaviBot00`).
+
+### One-time setup
+
+1. Go to **Settings → Pages** in the repo
 2. Source: `Deploy from a branch`
 3. Branch: `main` / `(root)`
-4. Guarda → GitHub Pages publicará automáticamente en cada push
+4. Save → GitHub Pages will publish automatically on every push
 
-### Coexistencia con el README de perfil
+### Coexistence with the profile README
 
-GitHub Pages sirve `index.html` desde la raíz del repo. El `README.md` lo usa GitHub para el perfil. No se pisan: son dos cosas distintas.
+GitHub Pages serves `index.html` from the repo root. GitHub uses `README.md` for the profile page. They don't collide: they're two separate things.
 
-Si el repo ya tiene un `index.html` de otro contenido, mueve ese contenido a una subcarpeta y ajusta las rutas.
+If the repo already has an `index.html` with other content, move that content into a subfolder and adjust the paths.
 
 ---
 
-## Tecnologías utilizadas
+## Technologies used
 
-- **HTML5** semántico con atributos ARIA
+- **HTML5** semantic, with ARIA attributes
 - **CSS3**: custom properties, grid, flexbox, `backdrop-filter`, `IntersectionObserver`-friendly
-- **JavaScript ES6+**: módulos IIFE, `async/await`, `IntersectionObserver`, `fetch`
-- Sin frameworks, sin dependencias, sin build step
+- **JavaScript ES6+**: IIFE modules, `async/await`, `IntersectionObserver`, `fetch`
+- No frameworks, no dependencies, no build step
 
 ---
 
-## Checklist pre-deploy
+## Pre-deploy checklist
 
-- [ ] CV actualizado en `docs/`
-- [ ] Foto añadida en `assets/foto.jpg` y activada en `index.html` (placeholder "JB" sigue activo)
-- [ ] Formulario conectado a Formspree / EmailJS
-- [ ] `og:url` en `index.html` apunta a la URL real
-- [ ] Dominio `javierb.dev` — cuando esté activo, actualizar el link "Portfolio" en el `README.md` raíz (hoy apunta a `javibot00.github.io/JaviBot00`)
-- [ ] Badge de LinkedIn en `README.md` raíz usa `custom-icon-badges.demolab.com` (mirror de terceros, no `img.shields.io`) por un bug conocido de Simple Icons con fondos no oficiales — si deja de responder, sustituir por SVG propio en `assets/`
-- [ ] Revisado en móvil (Chrome DevTools → responsive)
-- [ ] Revisado con `prefers-reduced-motion` activado
-- [ ] Revisado en modo claro y oscuro
+- [ ] Photo added at `assets/foto.jpg` and enabled in `index.html` ("JB" placeholder is still active)
+- [ ] `og:url` in `index.html` points to the real URL
+- [ ] `javierb.dev` domain — once active, update the "Portfolio" link in the root `README.md` (currently points to `javibot00.github.io/JaviBot00`)
+- [ ] Checked with `prefers-reduced-motion` enabled
+- [ ] Checked in both light and dark mode
